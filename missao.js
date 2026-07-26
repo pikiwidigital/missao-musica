@@ -13,6 +13,28 @@ const missionChallenge =
 const missionImage =
   document.getElementById("mission-image");
 
+
+/*
+  Áudio da missão.
+*/
+
+const missionAudioContainer =
+  document.getElementById("mission-audio-container");
+
+const missionAudioButton =
+  document.getElementById("mission-audio-button");
+
+const missionAudioIcon =
+  document.getElementById("mission-audio-icon");
+
+const missionAudio =
+  document.getElementById("mission-audio");
+
+
+/*
+  Ajuda.
+*/
+
 const helpButton =
   document.getElementById("help-button");
 
@@ -34,6 +56,11 @@ const helpVideo =
 const closeHelpButton =
   document.getElementById("close-help-button");
 
+
+/*
+  Botões e mensagens.
+*/
+
 const completeButton =
   document.getElementById("complete-button");
 
@@ -47,6 +74,10 @@ const currentPlayerMessage =
   document.getElementById("current-player-message");
 
 
+/*
+  Símbolos das categorias.
+*/
+
 const categorySymbols = {
   notas: "♫",
   ritmo: "👏",
@@ -55,6 +86,10 @@ const categorySymbols = {
   movimento: "🕺"
 };
 
+
+/*
+  Jogadores.
+*/
 
 const players =
   JSON.parse(localStorage.getItem("players")) || [];
@@ -67,7 +102,10 @@ let currentPlayerIndex =
   Garante que o índice do jogador é válido.
 */
 
-if (currentPlayerIndex >= players.length) {
+if (
+  players.length > 0 &&
+  currentPlayerIndex >= players.length
+) {
   currentPlayerIndex = 0;
 
   localStorage.setItem(
@@ -113,6 +151,7 @@ function showImageIfAvailable(
   if (!imagePath) {
     imageElement.hidden = true;
     imageElement.removeAttribute("src");
+    imageElement.alt = "";
     return;
   }
 
@@ -122,6 +161,7 @@ function showImageIfAvailable(
 
   imageElement.onerror = function () {
     imageElement.hidden = true;
+    imageElement.removeAttribute("src");
   };
 
   imageElement.src = imagePath;
@@ -130,21 +170,57 @@ function showImageIfAvailable(
 
 
 /*
-  Prepara áudio ou vídeo apenas quando existe.
+  Prepara áudio ou vídeo da ajuda.
 */
 
 function prepareMedia(
   mediaElement,
   mediaPath
 ) {
+  mediaElement.pause();
+
   if (!mediaPath) {
     mediaElement.hidden = true;
     mediaElement.removeAttribute("src");
+    mediaElement.load();
     return;
   }
 
   mediaElement.src = mediaPath;
   mediaElement.hidden = false;
+  mediaElement.load();
+}
+
+
+/*
+  Prepara o áudio principal da missão.
+
+  O botão só aparece quando existe um ficheiro
+  indicado em missionAudio.
+*/
+
+function prepareMissionAudio(audioPath) {
+  missionAudio.pause();
+  missionAudio.currentTime = 0;
+
+  missionAudioButton.classList.remove("playing");
+  missionAudioIcon.textContent = "🔊";
+
+  if (!audioPath) {
+    missionAudioContainer.hidden = true;
+    missionAudio.removeAttribute("src");
+    missionAudio.load();
+    return;
+  }
+
+  missionAudio.src = audioPath;
+  missionAudioContainer.hidden = false;
+  missionAudio.load();
+
+  missionAudioButton.setAttribute(
+    "aria-label",
+    "Ouvir som da missão"
+  );
 }
 
 
@@ -154,6 +230,8 @@ function prepareMedia(
 
 function chooseRandomMission() {
   if (availableMissions.length === 0) {
+    missionLoading.hidden = false;
+
     missionLoading.textContent =
       "Ainda não existem missões nesta categoria.";
 
@@ -191,6 +269,10 @@ function displayMission(mission) {
     missionImage,
     mission.missionImage,
     "Imagem necessária para realizar a missão."
+  );
+
+  prepareMissionAudio(
+    mission.missionAudio
   );
 
   helpText.textContent =
@@ -231,6 +313,68 @@ function displayMission(mission) {
   newMissionButton.textContent =
     "Escolher outra missão";
 }
+
+
+/*
+  Reproduz ou pausa o áudio da missão.
+*/
+
+missionAudioButton.addEventListener(
+  "click",
+  async function () {
+    try {
+      if (missionAudio.paused) {
+        missionAudio.currentTime = 0;
+
+        await missionAudio.play();
+
+        missionAudioButton.classList.add("playing");
+
+        missionAudioIcon.textContent = "⏸";
+
+        missionAudioButton.setAttribute(
+          "aria-label",
+          "Pausar som da missão"
+        );
+      } else {
+        missionAudio.pause();
+
+        missionAudioButton.classList.remove("playing");
+
+        missionAudioIcon.textContent = "🔊";
+
+        missionAudioButton.setAttribute(
+          "aria-label",
+          "Ouvir som da missão"
+        );
+      }
+    } catch (error) {
+      console.error(
+        "Não foi possível reproduzir o áudio:",
+        error
+      );
+    }
+  }
+);
+
+
+/*
+  Quando o áudio termina, repõe o botão.
+*/
+
+missionAudio.addEventListener(
+  "ended",
+  function () {
+    missionAudioButton.classList.remove("playing");
+
+    missionAudioIcon.textContent = "🔊";
+
+    missionAudioButton.setAttribute(
+      "aria-label",
+      "Ouvir novamente o som da missão"
+    );
+  }
+);
 
 
 /*
@@ -276,6 +420,12 @@ closeHelpButton.addEventListener(
 completeButton.addEventListener(
   "click",
   function () {
+    missionAudio.pause();
+
+    missionAudioButton.classList.remove("playing");
+
+    missionAudioIcon.textContent = "🔊";
+
     if (currentPlayer) {
       missionMessage.textContent =
         `Muito bem, ${currentPlayer.name}! Missão cumprida!`;
@@ -304,12 +454,15 @@ completeButton.addEventListener(
 
   Depois de concluir:
   regressa às categorias.
-  Com vários jogadores, avança primeiro para o jogador seguinte.
+
+  Com vários jogadores:
+  avança primeiro para o jogador seguinte.
 */
 
 newMissionButton.addEventListener(
   "click",
   function () {
+    missionAudio.pause();
 
     /*
       A missão ainda não foi concluída.
@@ -321,10 +474,9 @@ newMissionButton.addEventListener(
       return;
     }
 
-
     /*
       A missão foi concluída.
-      Com vários jogadores, muda para o jogador seguinte.
+      Com vários jogadores, muda o turno.
     */
 
     if (players.length > 1) {
@@ -336,13 +488,6 @@ newMissionButton.addEventListener(
         String(currentPlayerIndex)
       );
     }
-
-
-    /*
-      Regressa às categorias:
-      - 1 jogador: começa uma nova jogada;
-      - vários jogadores: começa a jogada seguinte.
-    */
 
     window.location.href =
       "categorias.html";
@@ -381,8 +526,12 @@ async function loadMissions() {
   } catch (error) {
     console.error(error);
 
+    missionLoading.hidden = false;
+
     missionLoading.textContent =
       "Não foi possível carregar a missão.";
+
+    missionCard.hidden = true;
   }
 }
 

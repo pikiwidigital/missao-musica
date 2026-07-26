@@ -60,17 +60,47 @@
         </div>
 
         <img
-          class="mission-image"
-          id="mission-image"
-          src=""
-          alt=""
-          hidden
-        >
+  class="mission-image"
+  id="mission-image"
+  src=""
+  alt=""
+  hidden
+>
 
-        <h1
-          class="mission-challenge"
-          id="mission-challenge"
-        ></h1>
+<div
+  class="mission-audio-container"
+  id="mission-audio-container"
+  hidden
+>
+  <button
+    class="mission-audio-button"
+    id="mission-audio-button"
+    type="button"
+    aria-label="Ouvir som da missão"
+  >
+    <span
+      class="mission-audio-icon"
+      id="mission-audio-icon"
+      aria-hidden="true"
+    >
+      🔊
+    </span>
+
+    <span class="mission-audio-label">
+      Ouvir
+    </span>
+  </button>
+
+  <audio
+    id="mission-audio"
+    preload="metadata"
+  ></audio>
+</div>
+
+<h1
+  class="mission-challenge"
+  id="mission-challenge"
+></h1>
 
         <button
           class="help-button"

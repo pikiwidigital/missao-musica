@@ -31,5 +31,18 @@
     "helpImage": "help-images/N0003.png",
     "helpAudio": null,
     "helpVideo": null
-  }
+  },
+{
+  "id": "A0001",
+  "category": "audicao",
+  "subcategory": "Pitch",
+  "difficulty": 1,
+  "challenge": "Este som é grave ou agudo?",
+  "missionImage": null,
+  "missionAudio": "audio/A0001.mp3",
+  "helpText": "Ouve novamente e repara se o som parece mais baixo e profundo ou mais alto e leve.",
+  "helpImage": null,
+  "helpAudio": null,
+  "helpVideo": null
+}
 ]
