@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Escolhe uma categoria de missão em Missão: Música!"
+  >
+
+  <meta name="theme-color" content="#fff8ef">
+
+  <title>Escolhe a categoria | Missão: Música!</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+
+  <main class="categories-screen">
+
+    <section class="categories-content">
+
+      <img
+        class="categories-logo"
+        src="logo.png"
+        alt="Missão: Música!, com Pikiwi"
+      >
+
+      <div
+        class="progress-indicator"
+        aria-label="Passo 4 de 4"
+      >
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+      </div>
+
+      <h1 class="categories-title">
+        Onde calhaste?
+      </h1>
+
+      <p
+        class="categories-instruction"
+        id="player-greeting"
+      >
+        Escolhe o símbolo da tua casa.
+      </p>
+
+      <section
+        class="digital-die"
+        aria-labelledby="die-title"
+      >
+
+        <h2
+          class="digital-die-title"
+          id="die-title"
+        >
+          Precisas de um dado?
+        </h2>
+
+        <div
+  class="die-result"
+  id="die-result"
+  aria-live="polite"
+  aria-label="Dado ainda não lançado"
+>
+  <span class="pip pip-1"></span>
+  <span class="pip pip-2"></span>
+  <span class="pip pip-3"></span>
+  <span class="pip pip-4"></span>
+  <span class="pip pip-5"></span>
+  <span class="pip pip-6"></span>
+  <span class="pip pip-7"></span>
+  <span class="pip pip-8"></span>
+  <span class="pip pip-9"></span>
+</div>
+
+        <button
+          class="die-button"
+          id="die-button"
+          type="button"
+        >
+          Lançar dado digital
+        </button>
+
+      </section>
+
+      <div class="categories-grid">
+
+        <button
+          class="category-button category-notes"
+          type="button"
+          data-category="notas"
+          aria-label="Notas"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            ♫
+          </span>
+
+          <span class="category-name">
+            Notas
+          </span>
+        </button>
+
+        <button
+          class="category-button category-rhythm"
+          type="button"
+          data-category="ritmo"
+          aria-label="Ritmo"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            👏
+          </span>
+
+          <span class="category-name">
+            Ritmo
+          </span>
+        </button>
+
+        <button
+          class="category-button category-instruments"
+          type="button"
+          data-category="instrumentos"
+          aria-label="Instrumentos"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            🎻
+          </span>
+
+          <span class="category-name">
+            Instrumentos
+          </span>
+        </button>
+
+        <button
+          class="category-button category-listening"
+          type="button"
+          data-category="audicao"
+          aria-label="Audição"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            👂
+          </span>
+
+          <span class="category-name">
+            Audição
+          </span>
+        </button>
+
+        <button
+          class="category-button category-movement"
+          type="button"
+          data-category="movimento"
+          aria-label="Movimento"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            🕺
+          </span>
+
+          <span class="category-name">
+            Movimento
+          </span>
+        </button>
+
+        <button
+          class="category-button category-star"
+          type="button"
+          data-category="estrela"
+          aria-label="Casa Estrela"
+        >
+          <span
+            class="category-symbol"
+            aria-hidden="true"
+          >
+            ★
+          </span>
+
+          <span class="category-name">
+            Estrela
+          </span>
+        </button>
+
+      </div>
+
+      <p
+        class="category-message"
+        id="category-message"
+        aria-live="polite"
+      ></p>
+
+    </section>
+
+  </main>
+
+  <script src="categorias.js"></script>
+
+</body>
+</html>

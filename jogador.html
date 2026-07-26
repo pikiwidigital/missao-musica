@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Identificação dos jogadores de Missão: Música!"
+  >
+
+  <meta name="theme-color" content="#fff8ef">
+
+  <title>Quem vai jogar? | Missão: Música!</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+
+  <main class="player-screen">
+
+    <section class="player-content">
+
+      <img
+        class="player-logo"
+        src="logo.png"
+        alt="Missão: Música!, com Pikiwi"
+      >
+
+      <h1 class="player-title">
+        Quem vai jogar?
+      </h1>
+
+      <p class="player-introduction">
+        Podes jogar sozinho ou adicionar até 6 jogadores.
+      </p>
+
+      <form class="player-form" id="player-form">
+
+        <div
+          class="players-list"
+          id="players-list"
+        ></div>
+
+        <button
+          class="add-player-button"
+          id="add-player-button"
+          type="button"
+        >
+          + Adicionar jogador
+        </button>
+
+        <button
+          class="continue-button"
+          type="submit"
+        >
+          Continuar
+        </button>
+
+        <p
+          class="form-message"
+          id="form-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="jogador.js"></script>
+
+</body>
+</html>

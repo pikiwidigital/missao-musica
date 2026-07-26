@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Missão musical de Missão: Música!"
+  >
+
+  <meta name="theme-color" content="#fff8ef">
+
+  <title>A tua missão | Missão: Música!</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+
+  <main class="mission-screen">
+
+    <section class="mission-content">
+
+      <img
+        class="mission-logo"
+        src="logo.png"
+        alt="Missão: Música!, com Pikiwi"
+      >
+
+      <p class="mission-loading" id="mission-loading">
+        A preparar a tua missão...
+      </p>
+<p
+  class="current-player-message"
+  id="current-player-message"
+></p>
+      <article
+        class="mission-card"
+        id="mission-card"
+        hidden
+      >
+
+        <div
+          class="mission-category-symbol"
+          id="mission-category-symbol"
+          aria-hidden="true"
+        >
+          ♫
+        </div>
+
+        <img
+          class="mission-image"
+          id="mission-image"
+          src=""
+          alt=""
+          hidden
+        >
+
+        <h1
+          class="mission-challenge"
+          id="mission-challenge"
+        ></h1>
+
+        <button
+          class="help-button"
+          id="help-button"
+          type="button"
+        >
+          Ajuda
+        </button>
+
+        <section
+          class="help-panel"
+          id="help-panel"
+          aria-labelledby="help-title"
+          hidden
+        >
+
+          <h2 id="help-title">
+            Ajuda
+          </h2>
+
+          <p id="help-text"></p>
+
+          <img
+            class="help-image"
+            id="help-image"
+            src=""
+            alt=""
+            hidden
+          >
+
+          <audio
+            class="help-audio"
+            id="help-audio"
+            controls
+            hidden
+          ></audio>
+
+          <video
+            class="help-video"
+            id="help-video"
+            controls
+            playsinline
+            hidden
+          ></video>
+
+          <button
+            class="close-help-button"
+            id="close-help-button"
+            type="button"
+          >
+            Fechar ajuda
+          </button>
+
+        </section>
+
+        <div class="mission-actions">
+
+          <button
+            class="complete-button"
+            id="complete-button"
+            type="button"
+          >
+            Missão cumprida
+          </button>
+
+          <button
+  class="new-mission-button"
+  id="new-mission-button"
+  type="button"
+>
+  Escolher outra missão
+</button>
+
+        </div>
+
+        <p
+          class="mission-message"
+          id="mission-message"
+          aria-live="polite"
+        ></p>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="missao.js"></script>
+
+</body>
+</html>

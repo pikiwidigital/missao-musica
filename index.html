@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Missão: Música! — companheiro digital do jogo musical Pikiwi."
+  >
+
+  <meta name="theme-color" content="#fff7e8">
+
+  <title>Missão: Música!</title>
+
+  <!-- Ficheiro de estilos -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Configuração da PWA -->
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Ícone da aplicação -->
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+
+  <main class="home-screen">
+
+    <section class="home-content">
+
+      <!--
+        Coloca o ficheiro do logótipo na mesma pasta
+        e dá-lhe o nome: logo.png
+      -->
+      <img
+        class="brand-logo"
+        src="logo.png"
+        alt="Missão: Música!"
+      >
+
+      <p class="welcome-message">
+        Vamos jogar juntos?
+      </p>
+
+      <button
+        class="start-button"
+        id="start-button"
+        type="button"
+      >
+        Começar
+      </button>
+
+      <p
+        class="status-message"
+        id="status-message"
+        aria-live="polite"
+      ></p>
+
+    </section>
+
+  </main>
+
+  <!-- Ficheiro com o funcionamento do botão -->
+  <script src="app.js"></script>
+
+</body>
+</html>

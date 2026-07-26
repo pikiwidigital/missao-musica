@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "category": "notas",
+    "difficulty": "basic",
+    "challenge": "Quantos Dós consegues encontrar no piano?",
+    "missionImage": "",
+    "helpText": "O piano tem grupos de duas e de três teclas pretas. O Dó encontra-se imediatamente à esquerda de cada grupo de duas teclas pretas. Como as notas se repetem ao longo do teclado, existem vários Dós.",
+    "helpImage": "help-notas-do.png",
+    "helpAudio": "",
+    "helpVideo": ""
+  },
+  {
+    "id": 2,
+    "category": "notas",
+    "difficulty": "basic",
+    "challenge": "Toca as notas Dó–Ré–Mi.",
+    "missionImage": "",
+    "helpText": "Encontra um Dó. O Ré é a tecla branca seguinte e o Mi vem logo depois do Ré. Toca as três notas pela mesma ordem.",
+    "helpImage": "help-do-re-mi.png",
+    "helpAudio": "",
+    "helpVideo": ""
+  },
+  {
+    "id": 3,
+    "category": "notas",
+    "difficulty": "basic",
+    "challenge": "Como se chama esta nota?",
+    "missionImage": "missao-do-central.png",
+    "helpText": "Esta nota é o Dó central. Em clave de Sol, escreve-se numa pequena linha suplementar abaixo da pauta.",
+    "helpImage": "help-do-central.png",
+    "helpAudio": "",
+    "helpVideo": ""
+  }
+]

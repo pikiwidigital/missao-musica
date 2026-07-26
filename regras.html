@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Regras do jogo Missão: Música!"
+  >
+
+  <meta name="theme-color" content="#fff8ef">
+
+  <title>Como jogar | Missão: Música!</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+
+  <main class="rules-screen">
+
+    <section class="rules-content">
+
+      <img
+        class="rules-logo"
+        src="logo.png"
+        alt="Missão: Música!, com Pikiwi"
+      >
+
+      <div class="progress-indicator" aria-label="Passo 3 de 4">
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot"></span>
+      </div>
+
+      <div class="pikiwi-message">
+        Olá! Eu vou acompanhar-te durante esta aventura.
+        Primeiro, vou explicar-te como jogar.
+      </div>
+
+      <h1 class="rules-title">
+        Como jogar
+      </h1>
+
+      <ol class="rules-list">
+
+        <li class="rule-item">
+          <div class="rule-number">1</div>
+
+          <div class="rule-text">
+            <strong>Escolhe um peão</strong>
+            <p>
+              Coloca-o na seta de <strong>PARTIDA</strong>.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">2</div>
+
+          <div class="rule-text">
+            <strong>Lança o dado</strong>
+            <p>
+              Avança o número de casas indicado.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">3</div>
+
+          <div class="rule-text">
+            <strong>Escolhe o símbolo</strong>
+            <p>
+              Seleciona no ecrã o símbolo da casa onde paraste.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">4</div>
+
+          <div class="rule-text">
+            <strong>Cumpre a missão</strong>
+            <p>
+              Realiza a missão apresentada.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">5</div>
+
+          <div class="rule-text">
+            <strong>Missão cumprida?</strong>
+            <p>
+              Se conseguires, permaneces nessa casa.
+              Se não conseguires, recuas uma casa.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">6</div>
+
+          <div class="rule-text">
+            <strong>Casa Estrela</strong>
+            <p>
+              Não tens missão. Lança novamente o dado.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item rule-highlight">
+          <div class="rule-number">7</div>
+
+          <div class="rule-text">
+            <strong>Missão Maestro</strong>
+            <p>
+              Para passares da casa <strong>29</strong> para a casa
+              <strong>30</strong>, toca uma peça à tua escolha para o teu público.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item rule-highlight">
+          <div class="rule-number">8</div>
+
+          <div class="rule-text">
+            <strong>Meta</strong>
+            <p>
+              Para chegares à <strong>META</strong>, volta a cumprir a
+              <strong>Missão Maestro</strong>.
+            </p>
+          </div>
+        </li>
+
+        <li class="rule-item">
+          <div class="rule-number">9</div>
+
+          <div class="rule-text">
+            <strong>Vitória</strong>
+            <p>
+              Ganha o primeiro jogador que chegar à <strong>META</strong>
+              e completar a missão final.
+            </p>
+          </div>
+        </li>
+
+      </ol>
+
+      <button
+        class="rules-button"
+        id="rules-button"
+        type="button"
+      >
+        Percebi! Vamos jogar
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="regras.js"></script>
+
+</body>
+</html>
