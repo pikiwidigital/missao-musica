@@ -17,15 +17,32 @@
 
   <title>Missão: Música!</title>
 
-  <!-- Ficheiro de estilos -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Configuração da PWA -->
   <link rel="manifest" href="manifest.webmanifest">
 
-  <!-- Ícone da aplicação -->
-  <link rel="icon" href="icon-192.png">
-  <link rel="apple-touch-icon" href="icon-192.png">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="icon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="apple-touch-icon.png"
+  >
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="Missão Música"
+  >
 </head>
 
 <body>
@@ -34,17 +51,11 @@
 
     <section class="home-content">
 
-      <!--
-        Coloca o ficheiro do logótipo na mesma pasta
-        e dá-lhe o nome: logo.png
-      -->
-     <a href="index.html" class="logo-link">
-  <img
-    src="logo.png"
-    alt="Missão: Música!"
-    class="logo"
-  >
-</a>
+      <img
+        class="brand-logo"
+        src="logo.png"
+        alt="Missão: Música!, com Pikiwi"
+      >
 
       <p class="welcome-message">
         Vamos jogar juntos?
@@ -68,7 +79,6 @@
 
   </main>
 
-  <!-- Ficheiro com o funcionamento do botão -->
   <script src="app.js"></script>
 
 </body>
