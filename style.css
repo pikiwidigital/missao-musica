@@ -1365,3 +1365,21 @@ font-size:1.1rem;
   font-size: 1.2rem;
   font-weight: 900;
 }
+.logo-link{
+    display:inline-block;
+    text-decoration:none;
+}
+
+.logo-link img{
+    display:block;
+    cursor:pointer;
+    transition:transform .2s ease;
+}
+
+.logo-link:hover img{
+    transform:scale(1.03);
+}
+
+.logo-link:active img{
+    transform:scale(.98);
+}
