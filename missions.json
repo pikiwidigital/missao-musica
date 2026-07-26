@@ -1,35 +1,35 @@
 [
   {
-    "id": 1,
+    "id": "N0001",
     "category": "notas",
     "difficulty": "basic",
-    "challenge": "Quantos Dós consegues encontrar no piano?",
-    "missionImage": "",
-    "helpText": "O piano tem grupos de duas e de três teclas pretas. O Dó encontra-se imediatamente à esquerda de cada grupo de duas teclas pretas. Como as notas se repetem ao longo do teclado, existem vários Dós.",
-    "helpImage": "help-notas-do.png",
-    "helpAudio": "",
-    "helpVideo": ""
+    "challenge": "Quantas notas Dó consegues encontrar no piano?",
+    "missionImage": null,
+    "helpText": "O piano tem grupos de duas e de três teclas pretas. O Dó encontra-se imediatamente à esquerda de cada grupo de duas teclas pretas. Como as notas se repetem ao longo do teclado, existem várias notas Dó.",
+    "helpImage": "help-images/N0001.png",
+    "helpAudio": null,
+    "helpVideo": null
   },
   {
-    "id": 2,
+    "id": "N0002",
     "category": "notas",
     "difficulty": "basic",
     "challenge": "Toca as notas Dó–Ré–Mi.",
-    "missionImage": "",
+    "missionImage": null,
     "helpText": "Encontra um Dó. O Ré é a tecla branca seguinte e o Mi vem logo depois do Ré. Toca as três notas pela mesma ordem.",
-    "helpImage": "help-do-re-mi.png",
-    "helpAudio": "",
-    "helpVideo": ""
+    "helpImage": "help-images/N0002.png",
+    "helpAudio": null,
+    "helpVideo": null
   },
   {
-    "id": 3,
+    "id": "N0003",
     "category": "notas",
     "difficulty": "basic",
     "challenge": "Como se chama esta nota?",
-    "missionImage": "missao-do-central.png",
-    "helpText": "Esta nota é o Dó central. Em clave de Sol, escreve-se numa pequena linha suplementar abaixo da pauta.",
-    "helpImage": "help-do-central.png",
-    "helpAudio": "",
-    "helpVideo": ""
+    "missionImage": "mission-images/N0003.png",
+    "helpText": "Esta nota é o Dó central. Na clave de Sol, escreve-se numa pequena linha suplementar abaixo da pauta.",
+    "helpImage": "help-images/N0003.png",
+    "helpAudio": null,
+    "helpVideo": null
   }
 ]
