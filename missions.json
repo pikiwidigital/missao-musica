@@ -5,6 +5,7 @@
     "difficulty": "basic",
     "challenge": "Quantas notas Dó consegues encontrar no piano?",
     "missionImage": null,
+    "missionAudio": null,
     "helpText": "O piano tem grupos de duas e de três teclas pretas. O Dó encontra-se imediatamente à esquerda de cada grupo de duas teclas pretas. Como as notas se repetem ao longo do teclado, existem várias notas Dó.",
     "helpImage": "help-images/N0001.png",
     "helpAudio": null,
@@ -16,6 +17,7 @@
     "difficulty": "basic",
     "challenge": "Toca as notas Dó–Ré–Mi.",
     "missionImage": null,
+    "missionAudio": null,
     "helpText": "Encontra um Dó. O Ré é a tecla branca seguinte e o Mi vem logo depois do Ré. Toca as três notas pela mesma ordem.",
     "helpImage": "help-images/N0002.png",
     "helpAudio": null,
@@ -27,22 +29,23 @@
     "difficulty": "basic",
     "challenge": "Como se chama esta nota?",
     "missionImage": "mission-images/N0003.png",
+    "missionAudio": null,
     "helpText": "Esta nota é o Dó central. Na clave de Sol, escreve-se numa pequena linha suplementar abaixo da pauta.",
     "helpImage": "help-images/N0003.png",
     "helpAudio": null,
     "helpVideo": null
   },
-{
-  "id": "A0001",
-  "category": "audicao",
-  "subcategory": "Pitch",
-  "difficulty": 1,
-  "challenge": "Este som é grave ou agudo?",
-  "missionImage": null,
-  "missionAudio": "audio/A0001.mp3",
-  "helpText": "Ouve novamente e repara se o som parece mais baixo e profundo ou mais alto e leve.",
-  "helpImage": null,
-  "helpAudio": null,
-  "helpVideo": null
-}
+  {
+    "id": "A0001",
+    "category": "audicao",
+    "subcategory": "Pitch",
+    "difficulty": 1,
+    "challenge": "Este som é grave ou agudo?",
+    "missionImage": null,
+    "missionAudio": "audio/A0001.mp3",
+    "helpText": "Ouve novamente e repara se o som parece mais baixo e profundo ou mais alto e leve.",
+    "helpImage": null,
+    "helpAudio": null,
+    "helpVideo": null
+  }
 ]
