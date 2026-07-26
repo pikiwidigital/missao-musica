@@ -1365,21 +1365,55 @@ font-size:1.1rem;
   font-size: 1.2rem;
   font-weight: 900;
 }
-.logo-link{
-    display:inline-block;
-    text-decoration:none;
+/* ==========================================================
+   JOGADOR ATUAL
+========================================================== */
+
+.current-player-message {
+  margin: 0 0 18px;
+
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
-.logo-link img{
-    display:block;
-    cursor:pointer;
-    transition:transform .2s ease;
+
+/* ==========================================================
+   LOGÓTIPO — REGRESSAR AO INÍCIO
+========================================================== */
+
+.logo-home-link {
+  display: inline-block;
+
+  border-radius: 18px;
+
+  text-decoration: none;
 }
 
-.logo-link:hover img{
-    transform:scale(1.03);
+.logo-home-link img {
+  display: block;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
 }
 
-.logo-link:active img{
-    transform:scale(.98);
+.logo-home-link:hover img {
+  transform: scale(1.03);
+}
+
+.logo-home-link:active img {
+  transform: scale(0.98);
+}
+
+.logo-home-link:focus-visible {
+  outline: 4px solid #6356a8;
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-home-link img {
+    transition: none;
+  }
 }
