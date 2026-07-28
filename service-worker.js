@@ -1,4 +1,4 @@
-const CACHE_NAME = "missao-musica-v22";
+const CACHE_NAME = "missao-musica-v23";
 
 const FILES_TO_CACHE = [
   "./",
@@ -7,19 +7,25 @@ const FILES_TO_CACHE = [
   "./regras.html",
   "./categorias.html",
   "./missao.html",
+
   "./style.css",
+
   "./app.js",
   "./jogador.js",
   "./regras.js",
   "./categorias.js",
   "./missao.js",
+  "./sounds.js",
+
   "./missions.json",
   "./manifest.webmanifest",
+
   "./logo.png",
   "./icon-192.png",
-  "./icon-512.png"
-];
+  "./icon-512.png",
 
+  "./audio/button-click.mp3"
+];
 /*
   Guarda os ficheiros essenciais quando a aplicação
   é aberta pela primeira vez.
