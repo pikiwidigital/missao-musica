@@ -502,24 +502,46 @@ newMissionButton.addEventListener(
 async function loadMissions() {
   try {
     const response =
-      await fetch("missions.json");
-
-    if (!response.ok) {
-      throw new Error(
-        `Erro ao carregar missões: ${response.status}`
-      );
-    }
+  await fetch("missions.json", {
+    cache: "no-store"
+  });
 
     allMissions =
       await response.json();
 
-    const selectedCategory =
-      localStorage.getItem("selectedCategory");
+   const selectedCategory =
+  localStorage.getItem("selectedCategory");
 
-    availableMissions =
-      allMissions.filter(function (mission) {
-        return mission.category === selectedCategory;
-      });
+const categoryAliases = {
+  notas: "notas",
+  Notes: "notas",
+  notes: "notas",
+
+  ritmo: "ritmo",
+  Rhythm: "ritmo",
+  rhythm: "ritmo",
+
+  audicao: "audicao",
+  Listening: "audicao",
+  listening: "audicao",
+
+  instrumentos: "instrumentos",
+  Instruments: "instrumentos",
+  instruments: "instrumentos",
+
+  movimento: "movimento",
+  Movement: "movimento",
+  movement: "movimento"
+};
+
+const normalizedCategory =
+  categoryAliases[selectedCategory] ||
+  selectedCategory;
+
+availableMissions =
+  allMissions.filter(function (mission) {
+    return mission.category === normalizedCategory;
+  });
 
     chooseRandomMission();
 
